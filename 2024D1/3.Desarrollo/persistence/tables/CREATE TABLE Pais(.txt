@@ -1,0 +1,9 @@
+CREATE TABLE Pais(
+	IdPais CHAR(36),
+	Nombre VARCHAR(255),
+	Activo BIT DEFAULT b'1',
+	Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY(IdPais)
+);
+
+

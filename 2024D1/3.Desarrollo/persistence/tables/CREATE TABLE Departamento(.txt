@@ -1,0 +1,9 @@
+CREATE TABLE Departamento(
+	IdDepartamento CHAR(36),
+	IdPais CHAR(36),
+	Nombre VARCHAR(255),
+	Activo BIT DEFAULT b'1',
+	Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY(IdDepartamento),
+	FOREIGN KEY(IdPais) REFERENCES Pais(IdPais)
+);
