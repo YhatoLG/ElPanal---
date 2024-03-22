@@ -1,0 +1,12 @@
+CREATE TABLE Empleado (
+IdEmpleado CHAR(36) PRIMARY KEY,
+Nombre_Del_Tecnico VARCHAR(255),
+Numero_De_Telefono VARCHAR(20),
+IdSede CHAR(36),
+FOREIGN KEY (IdSede) REFERENCES Sede(IdSede),
+IdTipo_de_Documento CHAR(36),
+FOREIGN KEY (IdTipo_de_Documento) REFERENCES Tipo_de_Documento(IdTipo_de_Documento),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

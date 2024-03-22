@@ -1,0 +1,18 @@
+CREATE TABLE Factura (
+IdFactura CHAR(36) PRIMARY KEY,
+IdTipo_de_Documento CHAR(36),
+FOREIGN KEY (IdTipo_de_Documento) REFERENCES Tipo_de_Documento(IdTipo_de_Documento),
+IdDetalle_Factura CHAR(36),
+FOREIGN KEY (IdDetalle_Factura) REFERENCES Detalle_Factura(IdDetalle_Factura),
+IdEmpresa CHAR(36),
+FOREIGN KEY (IdEmpresa) REFERENCES Empresa(IdEmpresa),
+IdUsuario CHAR(36),
+FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+

@@ -1,0 +1,12 @@
+CREATE TABLE Detalle_Factura (
+IdDetalle_Factura CHAR(36) PRIMARY KEY,
+Cotizacion VARCHAR(255),
+Fecha DATE,
+IdDomicilio CHAR(36),
+FOREIGN KEY (IdDomicilio) REFERENCES Domicilio(IdDomicilio),
+IdEmpleado CHAR(36),
+FOREIGN KEY (IdEmpleado) REFERENCES Empleado(IdEmpleado),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

@@ -1,0 +1,10 @@
+CREATE TABLE Tipo_De_Documento (
+IdTipo_De_Documento CHAR(36) PRIMARY KEY,
+Pasaporte VARCHAR(50),
+Cedula VARCHAR(50),
+Tarjeta_De_Identidad VARCHAR(50),
+Cedula_Extrajeria VARCHAR(50),
+NIT VARCHAR(50),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);

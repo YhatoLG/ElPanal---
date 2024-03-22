@@ -1,0 +1,9 @@
+CREATE TABLE Tipo_De_Domicilio (
+IdTipo_De_Domicilio CHAR(36) PRIMARY KEY,
+Nombre_Del_Tipo_De_Domicilio VARCHAR(255),
+Servicio_Ofrecidos VARCHAR(255),
+Tarifas VARCHAR(255),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

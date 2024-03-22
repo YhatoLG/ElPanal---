@@ -1,0 +1,10 @@
+CREATE TABLE Sede (
+IdSede CHAR(36) PRIMARY KEY,
+IdCiudad CHAR(36),
+FOREIGN KEY (IdCiudad) REFERENCES Ciudad(IdCiudad),
+IdEmpresa CHAR(36),
+FOREIGN KEY (IdEmpresa) REFERENCES Empresa(IdEmpresa),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

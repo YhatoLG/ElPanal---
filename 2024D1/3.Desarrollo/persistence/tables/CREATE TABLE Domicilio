@@ -1,0 +1,14 @@
+CREATE TABLE Domicilio (
+IdDomicilio CHAR(36) PRIMARY KEY,
+IdTipo_De_Domicilio CHAR(36),
+FOREIGN KEY (IdTipo_De_Domicilio) REFERENCES Tipo_De_Domicilio(IdTipo_De_Domicilio),
+IdEmpresa CHAR(36),
+FOREIGN KEY (IdEmpresa) REFERENCES Empresa(IdEmpresa),
+IdEmpleado CHAR(36),
+FOREIGN KEY (IdEmpleado) REFERENCES Empleado(IdEmpleado),
+IdUsuarios CHAR(36),
+FOREIGN KEY (IdUsuarios) REFERENCES Usuarios(IdUsuarios),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

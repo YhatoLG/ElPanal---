@@ -1,0 +1,14 @@
+CREATE TABLE Ciudad (
+IdCiudad CHAR(36) PRIMARY KEY,
+Nombre VARCHAR(255),
+Direccion VARCHAR (255),
+Codigo_Postal INT (255),
+Municipio VARCHAR (255),
+IdDepartamento CHAR(36),
+FOREIGN KEY (IdDepartamento) REFERENCES Departamento(IdDepartamento),
+IdPais CHAR(36),
+FOREIGN KEY (IdPais) REFERENCES Pais(IdPais),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

@@ -1,0 +1,16 @@
+CREATE TABLE Usuarios (
+IdUsuario CHAR(36) PRIMARY KEY,
+Nombre VARCHAR(255),
+Apellido VARCHAR(255),
+Numero_de_Telefono VARCHAR(20),
+IdEmpresa CHAR(36),
+FOREIGN KEY (IdEmpresa) REFERENCES Empresa(IdEmpresa),
+IdTipo_de_Documento CHAR(36),
+FOREIGN KEY (IdTipo_de_Documento) REFERENCES Tipo_de_Documento(IdTipo_de_Documento),
+IdCiudad CHAR(36),
+FOREIGN KEY (IdCiudad) REFERENCES Ciudad(IdCiudad),
+Activo BIT DEFAULT b'1',
+Actualiza DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
