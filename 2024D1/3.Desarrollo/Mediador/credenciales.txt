@@ -1,0 +1,3 @@
+Visual Studio Code: mongodb+srv://lucas1243:casa1243@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+ 
+python:mongodb+srv://lucas1243:casa1243@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

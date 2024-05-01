@@ -1,0 +1,15 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RetirarFactura`(
+	IN `P_IdFactura` CHAR(36)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+UPDATE Factura
+	SET Activo = 0,
+   	 Actualiza = CURRENT_TIMESTAMP()
+	WHERE IdFactura = P_IdFactura
+   	 AND Activo = 1;
+END

@@ -1,0 +1,14 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarDetalleFactura`(
+	IN `P_IdDetalle_Factura` CHAR(36),
+	IN `P_Cotizacion` VARCHAR(255),
+	IN `P_Fecha` DATE
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Detalle_Factura(IdDetalle_Factura, Cotizacion, Fecha) 
+	VALUES (P_IdDetalle_Factura,P_Cotizacion, P_Fecha);
+END

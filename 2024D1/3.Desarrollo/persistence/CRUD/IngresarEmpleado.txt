@@ -1,0 +1,14 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarEmpleado`(
+	IN `P_IdEmpleado` CHAR(36),
+	IN `P_Nombre_Del_Tecnico` VARCHAR(255),
+	IN `P_Numero_De_Telefono` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Empleado(IdEmpleado, Nombre_Del_Tecnico, Numero_De_Telefono) 
+	VALUES (P_IdEmpleado,P_Nombre_Del_Tecnico, P_Numero_De_Telefono);
+END

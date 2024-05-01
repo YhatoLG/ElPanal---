@@ -1,0 +1,50 @@
+SELECT 
+    JSON_ARRAYAGG(
+        JSON_OBJECT(
+            'IdEmpleado', Em.IdEmpleado,
+            'NombreDelEmpleado', Em.Nombre_Del_Tecnico,
+            'NumeroDeTelefono', Em.Numero_De_Telefono,
+                'IdSede', Se.IdSede,
+                'NombreDeSede', Se.NombreDeSede,
+                'IdEmpresa', Emp.IdEmpresa,
+                'NombreEmpresa', Emp.NombreEmpresa,
+                'Numero_de_Telefono', Emp.Numero_de_Telefono
+            )
+        )
+    ) AS JSONResult
+FROM Empleado Em
+JOIN Sede Se ON Em.IdSede = Se.IdSede
+JOIN Empresa Emp ON Se.IdEmpresa = Emp.IdEmpresa;
+
+[
+   {
+      "IdSede":"febedf48-05d2-11ef-8eb2-c0185071a8f2",
+      "IdEmpresa":"015b54a7-05a2-11ef-93a3-c0185071a8f2",
+      "IdEmpleado":"febfbf4e-05d2-11ef-8eb2-c0185071a8f2",
+      "NombreDeSede":"Sede Central",
+      "NombreEmpresa":"La Colmena Matriz",
+      "NumeroDeTelefono":"987-654-3210",
+      "NombreDelEmpleado":"Juan Pérez",
+      "Numero_de_Telefono":"123-456-7890"
+   },
+   {
+      "IdSede":"febee5d4-05d2-11ef-8eb2-c0185071a8f2",
+      "IdEmpresa":"015b5c0a-05a2-11ef-93a3-c0185071a8f2",
+      "IdEmpleado":"febfc40b-05d2-11ef-8eb2-c0185071a8f2",
+      "NombreDeSede":"Sede Norte",
+      "NombreEmpresa":"La Colmena Sucursal Norte",
+      "NumeroDeTelefono":"789-654-1230",
+      "NombreDelEmpleado":"Ana Gómez",
+      "Numero_de_Telefono":"321-654-0987"
+   },
+   {
+      "IdSede":"febee76c-05d2-11ef-8eb2-c0185071a8f2",
+      "IdEmpresa":"015b5e1a-05a2-11ef-93a3-c0185071a8f2",
+      "IdEmpleado":"febfc574-05d2-11ef-8eb2-c0185071a8f2",
+      "NombreDeSede":"Sede Sur",
+      "NombreEmpresa":"La Colmena Sucursal Sur",
+      "NumeroDeTelefono":"567-890-4321",
+      "NombreDelEmpleado":"Luis Martínez",
+      "Numero_de_Telefono":"456-123-6789"
+   }
+]

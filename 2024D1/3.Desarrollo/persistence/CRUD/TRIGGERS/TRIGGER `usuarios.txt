@@ -1,0 +1,3 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER `usuarios_before_insert` BEFORE INSERT ON `usuarios` FOR EACH ROW BEGIN
+	SET NEW.IdUsuario= UUID();
+END

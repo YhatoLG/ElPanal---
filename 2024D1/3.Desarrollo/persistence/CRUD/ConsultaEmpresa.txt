@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultaEmpresa`()
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+SELECT IdEmpresa, Nombre, Numero_de_Telefono, Activo, Actualiza
+	FROM Empresa
+	WHERE Activo = 1;
+END

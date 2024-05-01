@@ -1,0 +1,4 @@
+INSERT INTO Usuario (IdUsuario, Nombre, Apellido, Numero_de_Telefono)VALUES 
+('', 'Luis', 'Martinez', '555-0303'),
+('', 'Juan', 'Pérez', '555-0101'),
+('', 'Ana', 'García', '555-0202');

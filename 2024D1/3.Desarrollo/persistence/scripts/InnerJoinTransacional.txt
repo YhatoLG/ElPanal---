@@ -1,0 +1,15 @@
+SELECT 
+    F.IdFactura,
+    F.NumComprobante,
+    F.IVA,
+    F.Total,
+    DF.IdDetalle_Factura,
+    DF.Cotizacion,
+    DF.Fecha,
+    DF.IdDomicilio,
+    DF.IdEmpleado,
+    EF.EstadoFactura AS Estado,
+    EF.Activo AS EstadoActivo
+FROM Factura F
+INNER JOIN Detalle_Factura DF ON F.IdDetalle_Factura = DF.IdDetalle_Factura
+INNER JOIN EstadoFactura EF ON F.IdEstadoFactura = EF.IdEstadoFactura;

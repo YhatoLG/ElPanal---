@@ -1,0 +1,46 @@
+SELECT  
+    JSON_ARRAYAGG(
+        JSON_OBJECT(
+            'IdUsuario', U.IdUsuario,
+            'NombreUsuario', U.Nombre,
+            'ApellidoUsuario', U.Apellido,
+            'TelefonoUsuario', U.Numero_de_Telefono,
+                'IdTipoDeDocumento', U.IdTipo_de_Documento,
+                'TipoDocumento', TD.TipoDocumento,
+                'NumeroDocumento', TD.NumeroDocumento
+            
+        )
+    ) AS JSONResult
+FROM Usuarios U
+INNER JOIN Tipo_De_Documento TD ON U.IdTipo_de_Documento = TD.IdTipo_De_Documento;
+
+
+[
+   {
+      "IdUsuario":"79912d57-05fb-11ef-8eb2-c0185071a8f2",
+      "NombreUsuario":"Juan",
+      "TipoDocumento":"Cedula",
+      "ApellidoUsuario":"Pérez",
+      "NumeroDocumento":"1234567890",
+      "TelefonoUsuario":"555-0101",
+      "IdTipoDeDocumento":"53b48a5f-05f7-11ef-8eb2-c0185071a8f2"
+   },
+   {
+      "IdUsuario":"79914225-05fb-11ef-8eb2-c0185071a8f2",
+      "NombreUsuario":"Ana",
+      "TipoDocumento":"Pasaporte",
+      "ApellidoUsuario":"García",
+      "NumeroDocumento":"A1234567",
+      "TelefonoUsuario":"555-0202",
+      "IdTipoDeDocumento":"53b49bfd-05f7-11ef-8eb2-c0185071a8f2"
+   },
+   {
+      "IdUsuario":"7991451c-05fb-11ef-8eb2-c0185071a8f2",
+      "NombreUsuario":"Luis",
+      "TipoDocumento":"Tarjeta_De_Identidad",
+      "ApellidoUsuario":"Martinez",
+      "NumeroDocumento":"AB123456",
+      "TelefonoUsuario":"555-0303",
+      "IdTipoDeDocumento":"53b4a058-05f7-11ef-8eb2-c0185071a8f2"
+   }
+]

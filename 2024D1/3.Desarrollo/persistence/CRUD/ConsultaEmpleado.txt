@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultaEmpleado`()
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+SELECT IdEmpleado, Nombre_Del_Tecnico, Numero_De_Telefono, Activo, Actualiza
+	FROM Empleado
+	WHERE Activo = 1;
+END

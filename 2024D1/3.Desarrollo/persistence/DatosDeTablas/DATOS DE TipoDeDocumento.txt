@@ -1,0 +1,7 @@
+INSERT INTO Tipo_de_Documento (IdTipo_De_Documento, TipoDocumento, NumeroDocumento) VALUES
+('', 'Cedula', '1234567890'),
+('', 'Pasaporte', 'A1234567'),
+('', 'Tarjeta_De_Identidad', 'AB123456'),
+('', 'Cedula', '1234567899'),
+('', 'Pasaporte', 'A1234597'),
+('', 'NIT', '900123496');

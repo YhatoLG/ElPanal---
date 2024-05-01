@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultaCiudad`()
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+SELECT IdCiudad, Nombre, Direccion, Codigo_Postal, Municipio, Activo, Actualiza
+	FROM Ciudad
+	WHERE Activo = 1;
+END

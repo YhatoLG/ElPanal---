@@ -1,5 +1,6 @@
 CREATE TABLE Sede (
 IdSede CHAR(36) PRIMARY KEY,
+NombreDeSede(255),
 IdCiudad CHAR(36),
 FOREIGN KEY (IdCiudad) REFERENCES Ciudad(IdCiudad),
 IdEmpresa CHAR(36),

@@ -1,0 +1,3 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER `detalle_factura_before_insert` BEFORE INSERT ON `detalle_factura` FOR EACH ROW BEGIN
+	SET NEW.IdDetalle_factura= UUID();
+END

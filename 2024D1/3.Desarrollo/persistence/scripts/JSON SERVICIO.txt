@@ -1,0 +1,37 @@
+SELECT  
+    JSON_ARRAYAGG(
+        JSON_OBJECT(
+            'IdDomicilio', D.IdDomicilio,
+                'IdTipo_De_Domicilio', TD.IdTipo_De_Domicilio,
+                'NombreDelTipoDeDomicilio', TD.Nombre_Del_Tipo_De_Domicilio,
+                'ServicioOfrecidos', TD.Servicio_Ofrecidos,
+                'Tarifas', TD.Tarifas
+            )
+        )
+    ) AS JSONResult
+FROM Domicilio D
+INNER JOIN Tipo_De_Domicilio TD ON D.IdTipo_De_Domicilio = TD.IdTipo_De_Domicilio;
+
+[
+   {
+      "Tarifas":"100000.00",
+      "IdDomicilio":"ab0a0185-05ef-11ef-8eb2-c0185071a8f2",
+      "ServicioOfrecidos":"Instalación de cerraduras y cerrojos en puertas",
+      "IdTipo_De_Domicilio":"4afdbc95-05f1-11ef-8eb2-c0185071a8f2",
+      "NombreDelTipoDeDomicilio":"Instalación de Cerraduras"
+   },
+   {
+      "Tarifas":"80000.00",
+      "IdDomicilio":"aceb4908-05ef-11ef-8eb2-c0185071a8f2",
+      "ServicioOfrecidos":"Reparación de cerraduras dañadas o atascadas",
+      "IdTipo_De_Domicilio":"4affc81a-05f1-11ef-8eb2-c0185071a8f2",
+      "NombreDelTipoDeDomicilio":"Reparación de Cerraduras"
+   },
+   {
+      "Tarifas":"3000.00",
+      "IdDomicilio":"a7bed1ba-05ef-11ef-8eb2-c0185071a8f2",
+      "ServicioOfrecidos":"Creación de copias de llaves",
+      "IdTipo_De_Domicilio":"4affcc35-05f1-11ef-8eb2-c0185071a8f2",
+      "NombreDelTipoDeDomicilio":"Duplicado de Llaves"
+   }
+]

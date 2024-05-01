@@ -1,0 +1,15 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarUsuarios`(
+	IN `P_IdUsuario` CHAR(36),
+	IN `P_Nombre` VARCHAR(255),
+	IN `P_Apellido` VARCHAR(255),
+	IN `P_Numero_de_Telefono` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Usuarios(IdUsuario, Nombre, Apellido, Numero_de_Telefono) 
+	VALUES (P_IdUsuario,P_Nombre, P_Apellido, P_Numero_de_Telefono);
+END

@@ -1,0 +1,4 @@
+INSERT INTO Pais (IdPais, Nombre) VALUES
+('', 'COLOMBIA'),
+('', 'Alemania'),
+('', 'Venezuela');

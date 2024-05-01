@@ -1,0 +1,4 @@
+INSERT INTO Tipo_De_Domicilio (IdTipo_De_Domicilio, Nombre_Del_Tipo_De_Domicilio, Servicio_Ofrecidos, Tarifas)VALUES 
+('', 'Instalación de Cerraduras', 'Instalación de cerraduras y cerrojos en puertas', 100000.00),
+('', 'Reparación de Cerraduras', 'Reparación de cerraduras dañadas o atascadas', 80000.00),
+('', 'Duplicado de Llaves', 'Creación de copias de llaves', 3000.00);

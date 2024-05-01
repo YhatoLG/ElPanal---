@@ -1,0 +1,7 @@
+SELECT 
+    D.IdDomicilio,
+    TD.Nombre_Del_Tipo_De_Domicilio AS TipoDomicilio,
+    TD.Servicio_Ofrecidos AS Servicios,
+    TD.Tarifas
+FROM Domicilio D
+INNER JOIN Tipo_De_Domicilio TD ON D.IdTipo_De_Domicilio = TD.IdTipo_De_Domicilio;

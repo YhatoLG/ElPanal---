@@ -1,0 +1,5 @@
+INSERT INTO Factura (IdFactura, NumComprobante, IVA, Total)VALUES
+('', '', 22.800, 142.800),
+('', '', 17.100, 107.100),
+('', '', 10.070, 63.070);
+

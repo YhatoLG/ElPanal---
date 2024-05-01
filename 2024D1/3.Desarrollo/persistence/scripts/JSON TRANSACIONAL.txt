@@ -1,0 +1,57 @@
+SELECT  
+    JSON_ARRAYAGG(
+        JSON_OBJECT(
+            'IdFactura', F.IdFactura,
+            'NumComprobante', F.NumComprobante,
+            'IVA', F.IVA,
+            'Total', F.Total,
+            'IdDetalle_Factura', DF.IdDetalle_Factura,
+            'Cotizacion', DF.Cotizacion,
+            'Fecha', DF.Fecha,
+            'IdDomicilio', DF.IdDomicilio,
+            'IdEmpleado', DF.IdEmpleado
+            'IdEstadoFactura', EF.IdEstadoFactura,
+            'Estado', EF.EstadoFactura
+            )
+        )
+    ) AS JSONResult
+FROM Factura F
+INNER JOIN Detalle_Factura DF ON F.IdDetalle_Factura = DF.IdDetalle_Factura
+INNER JOIN EstadoFactura EF ON F.IdEstadoFactura = EF.IdEstadoFactura;
+
+
+[
+   {
+      "IVA":22800.0,
+      "Fecha":"2021-09-01 00:00:00.000000",
+      "Total":142800.0,
+      "Estado":"Pagada",
+      "IdFactura":"1f63b0a9-0652-11ef-a66f-c0185071a8f2",
+      "Cotizacion":20000.0,
+      "NumComprobante":"1f63b101-0652-11ef-a66f-c0185071a8f2",
+      "IdEstadoFactura":"b82ace66-0662-11ef-a66f-c0185071a8f2",
+      "IdDetalle_Factura":"b5151cf4-f296-11ee-94f8-c0185071a8f2"
+   },
+   {
+      "IVA":17100.0,
+      "Fecha":"2022-11-30 00:00:00.000000",
+      "Total":107100.0,
+      "Estado":"Pagada",
+      "IdFactura":"1f63c009-0652-11ef-a66f-c0185071a8f2",
+      "Cotizacion":10000.0,
+      "NumComprobante":"1f63c03a-0652-11ef-a66f-c0185071a8f2",
+      "IdEstadoFactura":"b82ad2d1-0662-11ef-a66f-c0185071a8f2",
+      "IdDetalle_Factura":"b51519c2-f296-11ee-94f8-c0185071a8f2"
+   },
+   {
+      "IVA":10070.0,
+      "Fecha":"2023-10-10 00:00:00.000000",
+      "Total":63070.0,
+      "Estado":"Pagada",
+      "IdFactura":"1f63c3a3-0652-11ef-a66f-c0185071a8f2",
+      "Cotizacion":50000.0,
+      "NumComprobante":"1f63c3c5-0652-11ef-a66f-c0185071a8f2",
+      "IdEstadoFactura":"b82ad487-0662-11ef-a66f-c0185071a8f2",
+      "IdDetalle_Factura":"50dfafc9-f296-11ee-94f8-c0185071a8f2"
+   }
+]

@@ -1,0 +1,16 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarCiudad`(
+	IN `P_IdCiudad` CHAR(36),
+	IN `P_Nombre` VARCHAR(255),
+	IN `P_Direccion` VARCHAR(255),
+	IN `P_Codigo_Postal` VARCHAR(255),
+	IN `P_Municipio` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Ciudad(IdCiudad, Nombre, Direccion, Codigo_Postal, Municipio) 
+	VALUES (P_IdCiudad,P_Nombre, P_Direccion, P_Codigo_Postal, P_Municipio);
+END

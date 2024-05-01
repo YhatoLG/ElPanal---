@@ -1,0 +1,4 @@
+INSERT INTO Empleado (IdEmpleado, Nombre_Del_Tecnico, Numero_De_Telefono)VALUES 
+('', 'Juan Pérez', '987-654-3210'),
+('', 'Ana Gómez', '789-654-1230'),
+('', 'Luis Martínez', '567-890-4321');

@@ -1,0 +1,3 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER `departamento_before_insert` BEFORE INSERT ON `departamento` FOR EACH ROW BEGIN
+	SET NEW.IdDepartamento= UUID();
+END

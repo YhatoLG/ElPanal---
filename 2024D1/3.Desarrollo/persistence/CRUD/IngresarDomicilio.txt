@@ -1,0 +1,12 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarDomicilio`(
+	IN `P_IdDomicilio` CHAR(36)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Domicilio(IdDomicilio) 
+	VALUES (P_IdDomicilio);
+END

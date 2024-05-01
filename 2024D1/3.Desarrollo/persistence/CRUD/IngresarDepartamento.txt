@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarDepartamento`(
+	IN `P_IdDepartamento` CHAR(36),
+	IN `P_Nombre` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Departamento(IdDepartamento, Nombre) 
+	VALUES (P_IdDepartamento,P_Nombre );
+END

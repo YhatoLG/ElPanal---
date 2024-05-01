@@ -1,0 +1,9 @@
+SELECT
+    U.IdUsuario AS IdUsuario,
+    U.Nombre AS NombreUsuario,
+    U.Apellido AS ApellidoUsuario,
+    U.Numero_de_Telefono AS TelefonoUsuario,
+    TD.TipoDocumento AS TipoDocumento,
+    TD.NumeroDocumento AS NumeroDocumento, 
+FROM Usuarios U
+INNER JOIN Tipo_De_Documento TD ON U.IdTipo_de_Documento = TD.IdTipo_De_Documento;

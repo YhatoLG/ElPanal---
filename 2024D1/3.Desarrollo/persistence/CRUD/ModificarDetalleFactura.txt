@@ -1,0 +1,18 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ModificarDetalleFactura`(
+	IN `P_IdDetalle_Factura` CHAR(36),
+	IN `P_Cotizacion` VARCHAR(255),
+	IN `P_Fecha` DATE
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+UPDATE Detalle_Factura
+	SET Cotizacion  = P_Cotizacion ,
+		Fecha = P_Fecha,
+		 Actualiza = CURRENT_TIMESTAMP()
+	WHERE IdDetalle_Factura = P_IdDetalle_Factura
+		 AND Activo = 1;
+END

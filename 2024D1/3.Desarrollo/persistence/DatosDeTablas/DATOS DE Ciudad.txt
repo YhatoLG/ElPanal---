@@ -1,0 +1,4 @@
+INSERT INTO Ciudad (IdCiudad, Nombre, Direccion, Codigo_Postal, Municipio) VALUES
+('', 'Bremen', 'Am Fockenberg 46, 28239', '28', 'WALLE'),
+('', 'Medellin', 'cr34 a sur #34', '541.231', 'Envigado'),
+('', 'CARACAS', 'CALLE 47# 48E SUR', '507.812', 'CATEDRAL');

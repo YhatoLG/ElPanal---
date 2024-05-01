@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultaDetalleFactura`()
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+SELECT IdDetalle_Factura, Cotizacion, Fecha, Activo, Actualiza
+	FROM Detalle_Factura
+	WHERE Activo = 1;
+END

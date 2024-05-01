@@ -1,0 +1,46 @@
+SELECT 	
+		JSON_ARRAYAGG(
+			JSON_OBJECT(
+			'IdPais', P.IdPais,
+			'NombrePais', P.Nombre,
+			'IdDepartamento', D.IdDepartamento,
+			'NombreDepartamento', D.Nombre,
+			'IdCiudad', C.IdCiudad,
+			'NombreCiudad', C.Nombre 
+			)
+		)
+FROM Pais P
+	INNER JOIN Departamento D
+		ON P.IdPais = D.IdPais
+	INNER JOIN Ciudad C
+		ON D.IdDepartamento = C.IdDepartamento
+		
+		
+		
+   [
+   {
+      "IdPais":"2db15b00-e81c-11ee-9965-c0185071a8f2",
+      "IdCiudad":"16139082-e845-11ee-9965-c0185071a8f2",
+      "NombrePais":"COLOMBIA",
+      "NombreCiudad":"Medellin",
+      "IdDepartamento":"252c4d0c-e845-11ee-9965-c0185071a8f2",
+      "NombreDepartamento":"Antioquia"
+   },
+   {
+      "IdPais":"d6191f01-e844-11ee-9965-c0185071a8f2",
+      "IdCiudad":"652efb13-f2fe-11ee-94f8-c0185071a8f2",
+      "NombrePais":"Alemania",
+      "NombreCiudad":"Bremen",
+      "IdDepartamento":"f2cf0f5a-f2fd-11ee-94f8-c0185071a8f2",
+      "NombreDepartamento":"Bremen"
+   },
+   {
+      "IdPais":"e593b56f-e844-11ee-9965-c0185071a8f2",
+      "IdCiudad":"8eb68622-f2fc-11ee-94f8-c0185071a8f2",
+      "NombrePais":"Venezuela",
+      "NombreCiudad":"CARACAS",
+      "IdDepartamento":"1d803dd6-f2fd-11ee-94f8-c0185071a8f2",
+      "NombreDepartamento":"Caracas"
+   }
+]
+]

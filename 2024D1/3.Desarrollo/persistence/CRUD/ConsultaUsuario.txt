@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultaUsuario`()
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+SELECT IdUsuario, Nombre, Apellido, Numero_de_Telefono, Activo, Actualiza
+	FROM Usuarios
+	WHERE Activo = 1;
+END

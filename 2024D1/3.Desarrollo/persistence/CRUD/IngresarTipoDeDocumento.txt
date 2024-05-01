@@ -1,0 +1,14 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarTipoDeDocumento`(
+	IN `P_IdTipo_De_Documento` CHAR(36),
+	IN `P_NombreDocumento` VARCHAR(255),
+	IN `P_NumeroDocumento` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Tipo_De_Documento(IdTipo_De_Documento, TipoDocumento, NumeroDocumento) 
+	VALUES (P_IdTipo_De_Documento,P_TipoDocumento, P_NumeroDocumento);
+END

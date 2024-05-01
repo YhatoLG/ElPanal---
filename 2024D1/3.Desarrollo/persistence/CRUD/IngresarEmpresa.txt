@@ -1,0 +1,14 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarEmpresa`(
+	IN `P_IdEmpresa` CHAR(36),
+	IN `P_Nombre` VARCHAR(255),
+	IN `P_Numero_de_Telefono` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Empresa(IdCiudad, Nombre, Numero_de_Telefono) 
+	VALUES (P_IdEmpresa,P_Nombre, P_Numero_de_Telefono);
+END

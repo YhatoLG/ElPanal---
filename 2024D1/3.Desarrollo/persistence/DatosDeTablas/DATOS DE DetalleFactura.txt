@@ -1,0 +1,4 @@
+INSERT INTO Detalle_Factura (IdDetalle_Factura, Cotizacion, Fecha) VALUES 
+('', 20000, '2021-09-01 '),
+('', 10000, '2022-11-30 '),
+('', 50000, '2023-10-10 ');

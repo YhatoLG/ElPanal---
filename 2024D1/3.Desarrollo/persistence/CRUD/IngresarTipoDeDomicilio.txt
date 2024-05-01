@@ -1,0 +1,15 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IngresarTipoDeDomicilio`(
+	IN `P_IdTipo_De_Domicilio` CHAR(36),
+	IN `P_Nombre_Del_Tipo_De_Domicilio` VARCHAR(255),
+	IN `P_Servicio_Ofrecidos` VARCHAR(255),
+	IN `P_Tarifas` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO Tipo_De_Domicilio(IdTipo_De_Domicilio, Nombre_Del_Tipo_De_Domicilio, Servicio_Ofrecidos, Tarifas) 
+	VALUES (P_IdTipo_De_Domicilio,P_Nombre_Del_Tipo_De_Domicilio, P_Servicio_Ofrecidos, P_Tarifas);
+END

@@ -1,0 +1,4 @@
+INSERT INTO EstadoFactura (IdEstadoFactura, EstadoFactura) VALUES
+('', 'Pagada'),
+('', 'Pagada'),
+('', 'Pagada');

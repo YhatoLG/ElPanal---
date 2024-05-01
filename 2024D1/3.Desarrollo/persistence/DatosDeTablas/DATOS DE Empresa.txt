@@ -1,0 +1,4 @@
+INSERT INTO Empresa (IdEmpresa, NombreEmpresa, Numero_de_Telefono) 
+('', 'La Colmena Matriz', '123-456-7890'),
+('', 'La Colmena Sucursal Norte', '321-654-0987'),
+('', 'La Colmena Sucursal Sur', '456-123-6789');

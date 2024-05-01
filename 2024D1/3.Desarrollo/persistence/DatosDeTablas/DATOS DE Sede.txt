@@ -1,0 +1,4 @@
+INSERT INTO Sede (IdSede, NombreDeSede) VALUES
+('', 'Sede Central'),
+('', 'Sede Norte'),
+('', 'Sede Sur');

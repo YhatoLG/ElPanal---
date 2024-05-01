@@ -1,0 +1,4 @@
+INSERT INTO Departamento (IdDepartamento, Nombre) VALUES
+('', 'Caracas'),
+('', 'Antioquia'),
+('', 'Bremen');

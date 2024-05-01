@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultaTipoDeDomicilio`()
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+SELECT IdTipo_De_Domicilio, Nombre_Del_Tipo_De_Domicilio, Servicio_Ofrecidos, Tarifas, Activo, Actualiza
+	FROM Tipo_De_Domicilio
+	WHERE Activo = 1;
+END

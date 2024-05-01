@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultaTipoDeDocumento`()
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+SELECT IdTipo_De_Documento, TipoDocumento, NumeroDocumento, Activo, Actualiza
+	FROM Tipo_De_Documento
+	WHERE Activo = 1;
+END

@@ -1,6 +1,9 @@
 CREATE TABLE Factura (
 IdFactura CHAR(36) PRIMARY KEY,
 IdTipo_de_Documento CHAR(36),
+NumComprobante CHAR(50),
+IVA  DOUBLE,
+Total DOUBLE,
 FOREIGN KEY (IdTipo_de_Documento) REFERENCES Tipo_de_Documento(IdTipo_de_Documento),
 IdDetalle_Factura CHAR(36),
 FOREIGN KEY (IdDetalle_Factura) REFERENCES Detalle_Factura(IdDetalle_Factura),
