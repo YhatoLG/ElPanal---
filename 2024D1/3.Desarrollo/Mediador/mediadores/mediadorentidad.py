@@ -25,7 +25,7 @@ app: FastAPI = FastAPI(
     tags=["Geografia"]
 )
 async def consultar_geografia(geografiamodelo: GeografiaModelo) -> list:
-    connection_string = "mongodb+srv://lucas1243:casa1243@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    connection_string = "mongodb+srv://@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     results = []
     client = pymongo.MongoClient(connection_string)
     try:
@@ -51,7 +51,7 @@ async def consultar_geografia(geografiamodelo: GeografiaModelo) -> list:
     tags=["Organizacion"]
     )
 async def consultar_organizacion(organizacionmodelo: OrganizacionModelo) -> list:
-    connection_string = "mongodb+srv://lucas1243:casa1243@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    connection_string = "mongodb+srv://@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     results = []
     client = pymongo.MongoClient(connection_string)
     try:
@@ -77,7 +77,7 @@ async def consultar_organizacion(organizacionmodelo: OrganizacionModelo) -> list
     tags=["Transaccional"]
     )
 async def consultar_transaccion(transaccionalmodelo: TransaccionalModelo) -> list:
-    connection_string = "mongodb+srv://lucas1243:casa1243@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    connection_string = "mongodb+srv://@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     results = []
     client = pymongo.MongoClient(connection_string)
     try:
@@ -103,7 +103,7 @@ async def consultar_transaccion(transaccionalmodelo: TransaccionalModelo) -> lis
     tags=["Domicilio"]
     )
 async def consultar_domicilio(domiciliomodelo: domicilioModelo) -> list:
-    connection_string = "mongodb+srv://lucas1243:casa1243@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    connection_string = "mongodb+srv://@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     results = []
     client = pymongo.MongoClient(connection_string)
     try:
@@ -129,7 +129,7 @@ async def consultar_domicilio(domiciliomodelo: domicilioModelo) -> list:
     tags=["Usuario"]
     )
 async def consultar_usuario(usuariomodelo: UsuarioModelo) -> list:
-    connection_string = "mongodb+srv://lucas1243:casa1243@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    connection_string = "mongodb+srv://@cluster0.nbfp451.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     results = []
     client = pymongo.MongoClient(connection_string)
     try:
